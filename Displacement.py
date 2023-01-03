@@ -4,13 +4,13 @@ window = Tk()
 window.title("test application")
 window.geometry('400x200')
 
-lbl1 = Label(window, text="visthapanaya :")
+lbl1 = Label(window, text="displacements :")
 lbl1.grid(column=0, row=0)
-lbl2 = Label(window, text="awasana prawegaya")
+lbl2 = Label(window, text="Final velocity")
 lbl2.grid(column=1, row=0)
-lbl3 = Label(window, text="arambaca prawegaya")
+lbl3 = Label(window, text="Initial velocity")
 lbl3.grid(column=2, row=0)
-lbl4 = Label(window, text="calaya")
+lbl4 = Label(window, text="time")
 lbl4.grid(column=3, row=0)
 result = Label(window, text="Result : ")
 result.grid(column=1, row=3)
@@ -40,6 +40,10 @@ def clicked():
 
 def clear():
     # txt3 = Label(window, text="Result : ")
+    txt1.configure(text = "")
+    txt2.configure(text = "")
+    txt3.configure(text = "")
+    result.configure(text = "0")
     print("log cleard")
 
 btn = Button(window, text="view calculate", command=clicked)
